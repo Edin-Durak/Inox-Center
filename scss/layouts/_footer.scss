@@ -1,0 +1,25 @@
+.footer {
+  //background-color: $color-grey-primary;
+  background-color: $color-grey-light;
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.6rem;
+
+  a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: $color-grey;
+    @include transition;
+    span {
+      color: $color-red;
+      text-transform: uppercase;
+      @include transition;
+    }
+  }
+  a:hover {
+    color: $color-red;
+    span {
+      color: $color-grey;
+    }
+  }
+}

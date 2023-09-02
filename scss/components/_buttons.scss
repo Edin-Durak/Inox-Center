@@ -1,0 +1,100 @@
+/*
+
+@include respond(phone) {
+  /* menu icon 
+  #nav-toggle span,
+  #nav-toggle span:before,
+  #nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 0.5rem;
+    width: 3rem;
+    background: white;
+    position: absolute;
+    display: block;
+    content: "";
+  }
+  #nav-toggle span:before {
+    top: -1rem;
+  }
+  #nav-toggle span:after {
+    bottom: -1rem;
+  }
+  .navbar-button {
+    display: inline;
+    margin: 1rem;
+  }
+}
+ */
+.btn {
+  background-color: $color-grey-light;
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  width: 15rem;
+  text-align: center;
+  color: $color-red;
+  border-radius: 2rem;
+  border-color: $color-white;
+  cursor: pointer;
+  @include transition;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  @include respond(phone) {
+    margin-bottom: 2rem;
+  }
+}
+
+.btn:hover {
+  background-color: $color-red;
+  color: $color-grey-light;
+}
+
+// Tab buttons
+
+.btn-tab {
+  text-decoration: none;
+  background-color: $color-white;
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  width: 15rem;
+  text-align: center;
+  color: $color-red;
+  border-radius: 2rem;
+  border-color: $color-white;
+  @include transition;
+
+  .btn-tab:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    background-color: $color-red;
+    color: $color-white;
+  }
+}
+
+.btn-tab-active {
+  transform: translateY(-1rem);
+  background-color: $color-red;
+  color: $color-white;
+}
+
+// Back to top button
+
+.back-to-top {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  width: 5rem;
+  height: 5rem;
+  border-color: $color-white;
+  color: $color-white;
+  background-color: $color-red;
+  @include transition;
+
+  &:hover {
+    border-radius: 50%;
+  }
+}

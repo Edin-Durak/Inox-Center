@@ -1,0 +1,131 @@
+.header {
+  .header--nav {
+    background-color: $color-grey-light;
+  }
+  .nav {
+    //background-color: $color-grey-primary;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .heading {
+      flex: 0 1 10%;
+      margin-left: 2rem;
+      a {
+        text-decoration: none;
+        font-size: 2rem;
+        color: $color-grey;
+        @include transition;
+        span {
+          color: $color-red;
+          text-transform: uppercase;
+          @include transition;
+        }
+      }
+      a:hover {
+        color: $color-red;
+        span {
+          color: $color-grey;
+        }
+      }
+    }
+    //media qquery
+  }
+  .nav__links {
+    margin-right: 5rem;
+    font-size: 1.6rem;
+    padding: 1rem;
+    flex: 0 1 40%;
+    display: flex;
+    justify-content: space-between;
+    a {
+      text-decoration: none;
+      background-color: $color-white;
+      margin-right: 0.5rem;
+      padding: 0.5rem 1rem;
+      width: 15rem;
+      text-align: center;
+      color: $color-red;
+      border-radius: 2rem;
+
+      @include transition;
+    }
+    a:last-child {
+      margin-right: 0;
+    }
+    a:hover {
+      background-color: $color-red;
+      color: $color-white;
+    }
+    @include respond(phone) {
+      flex-direction: column;
+      a {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .header__main {
+    margin: 0 auto;
+    max-width: 1200px;
+
+    padding: 3rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    //align-items: center;
+    gap: 2rem;
+
+    .header--heading {
+      flex: 0 1 45%;
+      justify-self: center;
+      align-self: center;
+      font-size: 3rem;
+      font-weight: 500;
+      line-height: 1.5;
+      .span-heading {
+        // display: block;
+        color: $color-red;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+      }
+      // Adding this class to span
+      .heading--animation {
+        // Adding animation
+        @include keyframes(show) {
+          0% {
+            opacity: 0;
+          }
+          25% {
+            opacity: 0.25;
+          }
+          50% {
+            opacity: 0.5;
+          }
+          75% {
+            opacity: 0.75;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+        @include animate(show, 5s, linear, 1);
+      }
+    }
+
+    .slide-show {
+      flex: 0 1 50%;
+      width: 50%;
+      justify-self: stretch;
+
+      img {
+        height: 35vh;
+        width: 100%;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
